@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A46C7882562A16400CFEC56 /* DatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46C7872562A16400CFEC56 /* DatingModel.swift */; };
+		3A46C78C2562A1C700CFEC56 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46C78B2562A1C700CFEC56 /* RootView.swift */; };
+		3A46C7902562A43100CFEC56 /* SelectSexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46C78F2562A43100CFEC56 /* SelectSexView.swift */; };
+		3A91F48C2562B09F00B96D25 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A91F48B2562B09F00B96D25 /* HomeView.swift */; };
 		3AA17B9525629ED200FCF498 /* previousday_CheckerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17B9425629ED200FCF498 /* previousday_CheckerApp.swift */; };
 		3AA17B9725629ED200FCF498 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17B9625629ED200FCF498 /* ContentView.swift */; };
 		3AA17B9925629ED200FCF498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA17B9825629ED200FCF498 /* Assets.xcassets */; };
 		3AA17B9C25629ED200FCF498 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA17B9B25629ED200FCF498 /* Preview Assets.xcassets */; };
+		3AA17BA725629EFF00FCF498 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17BA625629EFF00FCF498 /* CheckBoxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A46C7872562A16400CFEC56 /* DatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatingModel.swift; sourceTree = "<group>"; };
+		3A46C78B2562A1C700CFEC56 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		3A46C78F2562A43100CFEC56 /* SelectSexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSexView.swift; sourceTree = "<group>"; };
+		3A91F48B2562B09F00B96D25 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3AA17B9125629ED200FCF498 /* previousday-Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "previousday-Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA17B9425629ED200FCF498 /* previousday_CheckerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previousday_CheckerApp.swift; sourceTree = "<group>"; };
 		3AA17B9625629ED200FCF498 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3AA17B9825629ED200FCF498 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AA17B9B25629ED200FCF498 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3AA17B9D25629ED200FCF498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AA17BA625629EFF00FCF498 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A46C7862562A14C00CFEC56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A46C7872562A16400CFEC56 /* DatingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3AA17B8825629ED100FCF498 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +71,9 @@
 			isa = PBXGroup;
 			children = (
 				3AA17B9425629ED200FCF498 /* previousday_CheckerApp.swift */,
+				3A46C7862562A14C00CFEC56 /* Model */,
+				3AA17BA425629EDD00FCF498 /* View */,
+				3AA17BA525629EE600FCF498 /* Extension */,
 				3AA17B9625629ED200FCF498 /* ContentView.swift */,
 				3AA17B9825629ED200FCF498 /* Assets.xcassets */,
 				3AA17B9D25629ED200FCF498 /* Info.plist */,
@@ -67,6 +88,24 @@
 				3AA17B9B25629ED200FCF498 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3AA17BA425629EDD00FCF498 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A46C78F2562A43100CFEC56 /* SelectSexView.swift */,
+				3A46C78B2562A1C700CFEC56 /* RootView.swift */,
+				3A91F48B2562B09F00B96D25 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AA17BA525629EE600FCF498 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3AA17BA625629EFF00FCF498 /* CheckBoxView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AA17B9725629ED200FCF498 /* ContentView.swift in Sources */,
+				3A91F48C2562B09F00B96D25 /* HomeView.swift in Sources */,
+				3A46C7902562A43100CFEC56 /* SelectSexView.swift in Sources */,
+				3A46C7882562A16400CFEC56 /* DatingModel.swift in Sources */,
 				3AA17B9525629ED200FCF498 /* previousday_CheckerApp.swift in Sources */,
+				3AA17BA725629EFF00FCF498 /* CheckBoxView.swift in Sources */,
+				3A46C78C2562A1C700CFEC56 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

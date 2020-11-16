@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct previousday_CheckerApp: App {
+   
+    @StateObject var model = DatingModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView().environmentObject(model)
         }
     }
 }
