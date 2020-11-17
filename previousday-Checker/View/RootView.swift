@@ -8,7 +8,9 @@
 import SwiftUI
 
 enum ViewState {
+  
     case Home
+    
 }
 
 struct RootView: View {
@@ -20,24 +22,7 @@ struct RootView: View {
         if !model.setSex{
             SelectSexView()
         } else {
-            switch model.sex {
-            
-            case .Man :
-                switch model.viewState {
-                
-                case .Home :
-                    Text("Man")
-               
-                }
-            case .Woman :
-                switch model.viewState {
-                
-                case .Home :
-                    Text("WoMan")
-               
-                }
-                
-            }
+            HomeView()
         }
         
         

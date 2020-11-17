@@ -24,6 +24,15 @@ class DatingModel: ObservableObject {
             setSex = true
         }
     }
+    
+    var baseColor : Color {
+        switch sex {
+        case .Man :
+            return Color.blue
+        case .Woman :
+            return Color.pink
+        }
+    }
   
     
     
