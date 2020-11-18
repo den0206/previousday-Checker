@@ -13,12 +13,34 @@ enum Sex {
     case Woman
 }
 
+enum Pages {
+   
+    case Shoes
+    case Tooth
+    case Smell
+    
+    var question : String {
+        switch self {
+       
+        case .Shoes:
+            return "your shoes beautiful?"
+        case .Tooth:
+            return "your tooth beautiful?"
+        case .Smell:
+            return "You have a strong body odor?"
+        }
+    }
+}
+
 
 
 class DatingModel: ObservableObject {
     
+    @Environment(\.presentationMode) var presentation
+    
     @Published var setSex = false
     @Published var viewState : ViewState = .Home
+    @Published var currentPage : Pages = .Shoes
     @Published var sex : Sex = .Man {
         didSet {
             setSex = true
@@ -34,6 +56,35 @@ class DatingModel: ObservableObject {
         }
     }
   
+    
+    func nextPage() {
+        
+        switch currentPage {
+        
+        case .Shoes:
+            currentPage = .Tooth
+        case .Tooth:
+            currentPage = .Smell
+        case .Smell:
+            print("Next")
+        }
+    }
+    
+    func backPage() {
+        
+        
+        switch currentPage {
+
+        case .Shoes:
+            print("Already")
+        case .Tooth:
+            currentPage = .Shoes
+        case .Smell:
+            currentPage = .Tooth
+        }
+        
+       
+    }
     
     
     

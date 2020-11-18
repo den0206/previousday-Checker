@@ -11,6 +11,7 @@
 		3A46C78C2562A1C700CFEC56 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46C78B2562A1C700CFEC56 /* RootView.swift */; };
 		3A46C7902562A43100CFEC56 /* SelectSexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46C78F2562A43100CFEC56 /* SelectSexView.swift */; };
 		3A91F48C2562B09F00B96D25 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A91F48B2562B09F00B96D25 /* HomeView.swift */; };
+		3A9FC70325655D47007341F5 /* PieChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9FC70225655D47007341F5 /* PieChatView.swift */; };
 		3AA17B9525629ED200FCF498 /* previousday_CheckerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17B9425629ED200FCF498 /* previousday_CheckerApp.swift */; };
 		3AA17B9725629ED200FCF498 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17B9625629ED200FCF498 /* ContentView.swift */; };
 		3AA17B9925629ED200FCF498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA17B9825629ED200FCF498 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		3A46C78B2562A1C700CFEC56 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		3A46C78F2562A43100CFEC56 /* SelectSexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSexView.swift; sourceTree = "<group>"; };
 		3A91F48B2562B09F00B96D25 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3A9FC70225655D47007341F5 /* PieChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChatView.swift; sourceTree = "<group>"; };
 		3AA17B9125629ED200FCF498 /* previousday-Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "previousday-Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA17B9425629ED200FCF498 /* previousday_CheckerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previousday_CheckerApp.swift; sourceTree = "<group>"; };
 		3AA17B9625629ED200FCF498 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,9 +101,10 @@
 			children = (
 				3A46C78F2562A43100CFEC56 /* SelectSexView.swift */,
 				3A46C78B2562A1C700CFEC56 /* RootView.swift */,
-				3A91F48B2562B09F00B96D25 /* HomeView.swift */,
 				3AB4149B2563EC7B00CAF54C /* CheckButtonView.swift */,
+				3A91F48B2562B09F00B96D25 /* HomeView.swift */,
 				3AB414A22563EE5900CAF54C /* FirstQView.swift */,
+				3A9FC70225655D47007341F5 /* PieChatView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			files = (
 				3AA17B9725629ED200FCF498 /* ContentView.swift in Sources */,
 				3A91F48C2562B09F00B96D25 /* HomeView.swift in Sources */,
+				3A9FC70325655D47007341F5 /* PieChatView.swift in Sources */,
 				3A46C7902562A43100CFEC56 /* SelectSexView.swift in Sources */,
 				3A46C7882562A16400CFEC56 /* DatingModel.swift in Sources */,
 				3AB414A32563EE5900CAF54C /* FirstQView.swift in Sources */,

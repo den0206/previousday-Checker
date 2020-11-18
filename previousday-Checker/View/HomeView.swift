@@ -49,9 +49,10 @@ struct HomeView: View {
                     Spacer()
                     
                     
-                    NavigationLink(destination: FirstQView(), isActive: $navActive) {
+                    NavigationLink(destination: FirstQView(page: model.currentPage), isActive: $navActive) {
                         CustomButton(action: {self.navActive = true}, text: "始める")
                     }
+//                    .isDetailLink(false)
                     .padding()
                     
                 }

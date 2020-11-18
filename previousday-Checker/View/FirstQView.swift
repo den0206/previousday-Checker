@@ -14,6 +14,9 @@ struct FirstQView: View {
     @EnvironmentObject var model : DatingModel
     @State private var showCheckBox = false
     @State private var checked = false
+    @State private var navActive : Bool = false
+    
+    var page : Pages
     
     @State private var textOpacity : Double = 0
     
@@ -24,7 +27,11 @@ struct FirstQView: View {
                 
                 HStack {
                     
-                    Button(action: {presentation.wrappedValue.dismiss()}, label: {
+                    Button(action: {
+                        presentation.wrappedValue.dismiss()
+                        model.backPage()
+                        
+                    }, label: {
                         Image(systemName: "chevron.left")
                             .font(.system(size: 24))
                             .foregroundColor(.black)
@@ -38,7 +45,7 @@ struct FirstQView: View {
                 
                 Spacer()
                 
-                Text("Is your Shoes beautiful?")
+                Text(page.question)
                     .opacity(textOpacity)
                     .onAppear(perform: {
                         withAnimation(.easeInOut(duration: 2.0)) {
@@ -48,11 +55,18 @@ struct FirstQView: View {
                 
                 Spacer()
                 
+                
+                
                 if showCheckBox {
-                    CheckButtonView(checked: $checked, action: {})
-                        
-                        .transition(AnyTransition.opacity.animation(.easeInOut(duration: 1.0)))
-                        .padding()
+                    NavigationLink(destination: FirstQView(page: model.currentPage), isActive: $navActive, label: {
+                        CheckButtonView(checked: $checked, action: {
+                            model.nextPage()
+                            navActive = true
+                            
+                        })
+                            .transition(AnyTransition.opacity.animation(.easeInOut(duration: 1.0)))
+                            .padding()
+                    })
                         
                 }
                 
@@ -78,6 +92,6 @@ struct FirstQView: View {
 
 struct FirstQView_Previews: PreviewProvider {
     static var previews: some View {
-        FirstQView()
+        FirstQView(page: .Shoes)
     }
 }
