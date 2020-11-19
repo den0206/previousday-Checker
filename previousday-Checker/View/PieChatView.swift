@@ -35,11 +35,17 @@ final class PieChartViewModel : ObservableObject {
         self.data = [negativeData,positiveData]
         
     }
+    
+    func dataLabel(index : Int) -> String {
+        
+        return String(Int(self.data[index].percentage * 100)) + "%"
+        
+    }
 }
 
 struct PieChatView: View {
     
-    @StateObject var vm = PieChartViewModel(negativePer: 56)
+    var vm : PieChartViewModel
     
     var body: some View {
         ZStack {
@@ -55,9 +61,9 @@ struct PieChatView: View {
                     GeometryReader { geo in
                         VStack {
                             Text(currenrData.description)
-                            Text("\(currenrData.percentage * 100)")
+                            Text(vm.dataLabel(index: i))
                         }
-                        .font(.custom("Avenir", size: 20))
+                        .font(.custom("Avenir", size: 15))
                         .foregroundColor(.white)
                         .rotationEffect(.init(degrees: 90))
                         .position(getLabelCoodinate(in: geo.size, for: lastDegree + currentEndDegree / 2))
@@ -70,7 +76,7 @@ struct PieChatView: View {
             }
         }
         .rotationEffect(.init(degrees: -90))
-        .frame(width: 200, height: 200)
+        .frame(width: 150, height: 150)
     }
     
     private func getLabelCoodinate(in geoSize : CGSize, for degree : Double) -> CGPoint {
@@ -106,6 +112,6 @@ struct PieceofPie : Shape {
 
 struct PieChats_Previews: PreviewProvider {
     static var previews: some View {
-        PieChatView()
+        PieChatView(vm: PieChartViewModel(negativePer: 56))
     }
 }

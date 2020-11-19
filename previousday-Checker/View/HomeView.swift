@@ -49,7 +49,7 @@ struct HomeView: View {
                     Spacer()
                     
                     
-                    NavigationLink(destination: FirstQView(page: model.currentPage), isActive: $navActive) {
+                    NavigationLink(destination: QuestionView(page: model.currentPage, pieChartVm: model.pieChart), isActive: $navActive) {
                         CustomButton(action: {self.navActive = true}, text: "始める")
                     }
 //                    .isDetailLink(false)

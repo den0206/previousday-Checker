@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FirstQView: View {
+struct QuestionView: View {
     
     @Environment(\.presentationMode) var presentation
     
@@ -17,6 +17,7 @@ struct FirstQView: View {
     @State private var navActive : Bool = false
     
     var page : Pages
+    var pieChartVm : PieChartViewModel
     
     @State private var textOpacity : Double = 0
     
@@ -40,8 +41,7 @@ struct FirstQView: View {
                     
                     Spacer()
                 }
-                
-                /// present circle graph
+                    
                 
                 Spacer()
                 
@@ -53,20 +53,35 @@ struct FirstQView: View {
                         }
                     })
                 
+                /// present circle graph
+                
+                Spacer()
+                
+                PieChatView(vm: pieChartVm)
+                    
+                
                 Spacer()
                 
                 
                 
                 if showCheckBox {
-                    NavigationLink(destination: FirstQView(page: model.currentPage), isActive: $navActive, label: {
+                    NavigationLink(destination: QuestionView(page: model.currentPage, pieChartVm: model.pieChart), isActive: $navActive, label: {
                         CheckButtonView(checked: $checked, action: {
-                            model.nextPage()
-                            navActive = true
+                            if !model.isLastQuestion {
+                                model.nextPage()
+                                navActive = true
+                            } else {
+                                // TODO: - finish
+                                print("Last")
+                            }
                             
-                        })
+                            
+                        },text: !model.isLastQuestion ? "次へ" : "完了")
                             .transition(AnyTransition.opacity.animation(.easeInOut(duration: 1.0)))
                             .padding()
                     })
+                    
+              
                         
                 }
                 
@@ -92,6 +107,6 @@ struct FirstQView: View {
 
 struct FirstQView_Previews: PreviewProvider {
     static var previews: some View {
-        FirstQView(page: .Shoes)
+        QuestionView(page: .Shoes, pieChartVm: PieChartViewModel(negativePer: 33))
     }
 }

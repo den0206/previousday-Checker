@@ -47,6 +47,28 @@ class DatingModel: ObservableObject {
         }
     }
     
+    var pieChart : PieChartViewModel {
+        
+        /// switch Sex
+//        switch sex {}
+        
+        switch currentPage {
+      
+        case .Shoes:
+            return PieChartViewModel(negativePer: 50)
+        case .Tooth:
+            return PieChartViewModel(negativePer: 60)
+        case .Smell:
+            return PieChartViewModel(negativePer: 70)
+        }
+    }
+    
+    var isLastQuestion : Bool {
+        
+        return currentPage == .Smell
+    }
+    
+    
     var baseColor : Color {
         switch sex {
         case .Man :
@@ -86,6 +108,7 @@ class DatingModel: ObservableObject {
        
     }
     
+  
     
     
 }
