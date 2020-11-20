@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A23495525675FB100960D3B /* LoopMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A23495425675FB100960D3B /* LoopMovieView.swift */; };
+		3A2349582567609E00960D3B /* LooperBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2349572567609E00960D3B /* LooperBackgroundView.swift */; };
+		3A23495C2567616900960D3B /* couple-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A23495B2567612A00960D3B /* couple-1.mp4 */; };
+		3A2349642567631A00960D3B /* couple-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A2349632567630F00960D3B /* couple-2.mp4 */; };
+		3A2349652567631A00960D3B /* couple-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A2349612567630C00960D3B /* couple-3.mp4 */; };
+		3A2349662567631A00960D3B /* couple-4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A23495E2567630900960D3B /* couple-4.mp4 */; };
+		3A2349672567631A00960D3B /* couple-5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A23495F2567630900960D3B /* couple-5.mp4 */; };
+		3A2349682567631A00960D3B /* couple-6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A2349622567630E00960D3B /* couple-6.mp4 */; };
+		3A2349692567631A00960D3B /* couple-7.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3A2349602567630B00960D3B /* couple-7.mp4 */; };
 		3A46C7882562A16400CFEC56 /* DatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46C7872562A16400CFEC56 /* DatingModel.swift */; };
 		3A46C78C2562A1C700CFEC56 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46C78B2562A1C700CFEC56 /* RootView.swift */; };
 		3A46C7902562A43100CFEC56 /* SelectSexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46C78F2562A43100CFEC56 /* SelectSexView.swift */; };
+		3A6E31882567816B00FB5D84 /* EndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E31872567816B00FB5D84 /* EndView.swift */; };
 		3A91F48C2562B09F00B96D25 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A91F48B2562B09F00B96D25 /* HomeView.swift */; };
 		3A9FC70325655D47007341F5 /* PieChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9FC70225655D47007341F5 /* PieChatView.swift */; };
 		3AA17B9525629ED200FCF498 /* previousday_CheckerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17B9425629ED200FCF498 /* previousday_CheckerApp.swift */; };
@@ -22,9 +32,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A23495425675FB100960D3B /* LoopMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopMovieView.swift; sourceTree = "<group>"; };
+		3A2349572567609E00960D3B /* LooperBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooperBackgroundView.swift; sourceTree = "<group>"; };
+		3A23495B2567612A00960D3B /* couple-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "couple-1.mp4"; sourceTree = "<group>"; };
+		3A23495E2567630900960D3B /* couple-4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "couple-4.mp4"; sourceTree = "<group>"; };
+		3A23495F2567630900960D3B /* couple-5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "couple-5.mp4"; sourceTree = "<group>"; };
+		3A2349602567630B00960D3B /* couple-7.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "couple-7.mp4"; sourceTree = "<group>"; };
+		3A2349612567630C00960D3B /* couple-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "couple-3.mp4"; sourceTree = "<group>"; };
+		3A2349622567630E00960D3B /* couple-6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "couple-6.mp4"; sourceTree = "<group>"; };
+		3A2349632567630F00960D3B /* couple-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "couple-2.mp4"; sourceTree = "<group>"; };
 		3A46C7872562A16400CFEC56 /* DatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatingModel.swift; sourceTree = "<group>"; };
 		3A46C78B2562A1C700CFEC56 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		3A46C78F2562A43100CFEC56 /* SelectSexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSexView.swift; sourceTree = "<group>"; };
+		3A6E31872567816B00FB5D84 /* EndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndView.swift; sourceTree = "<group>"; };
 		3A91F48B2562B09F00B96D25 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3A9FC70225655D47007341F5 /* PieChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChatView.swift; sourceTree = "<group>"; };
 		3AA17B9125629ED200FCF498 /* previousday-Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "previousday-Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +69,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A23495A2567611A00960D3B /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				3A23495B2567612A00960D3B /* couple-1.mp4 */,
+				3A2349632567630F00960D3B /* couple-2.mp4 */,
+				3A2349612567630C00960D3B /* couple-3.mp4 */,
+				3A23495E2567630900960D3B /* couple-4.mp4 */,
+				3A23495F2567630900960D3B /* couple-5.mp4 */,
+				3A2349622567630E00960D3B /* couple-6.mp4 */,
+				3A2349602567630B00960D3B /* couple-7.mp4 */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
 		3A46C7862562A14C00CFEC56 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +114,7 @@
 				3A46C7862562A14C00CFEC56 /* ViewModel */,
 				3AA17BA425629EDD00FCF498 /* View */,
 				3AA17BA525629EE600FCF498 /* Extension */,
+				3A23495A2567611A00960D3B /* Movie */,
 				3AA17B9625629ED200FCF498 /* ContentView.swift */,
 				3AA17B9825629ED200FCF498 /* Assets.xcassets */,
 				3AA17B9D25629ED200FCF498 /* Info.plist */,
@@ -99,12 +134,12 @@
 		3AA17BA425629EDD00FCF498 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3A2349572567609E00960D3B /* LooperBackgroundView.swift */,
 				3A46C78F2562A43100CFEC56 /* SelectSexView.swift */,
 				3A46C78B2562A1C700CFEC56 /* RootView.swift */,
-				3A9FC70225655D47007341F5 /* PieChatView.swift */,
-				3AB4149B2563EC7B00CAF54C /* CheckButtonView.swift */,
 				3A91F48B2562B09F00B96D25 /* HomeView.swift */,
 				3AB414A22563EE5900CAF54C /* QuestionView.swift */,
+				3A6E31872567816B00FB5D84 /* EndView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,7 +147,10 @@
 		3AA17BA525629EE600FCF498 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3A9FC70225655D47007341F5 /* PieChatView.swift */,
+				3AB4149B2563EC7B00CAF54C /* CheckButtonView.swift */,
 				3AA17BA625629EFF00FCF498 /* CheckBoxView.swift */,
+				3A23495425675FB100960D3B /* LoopMovieView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -174,6 +212,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2349642567631A00960D3B /* couple-2.mp4 in Resources */,
+				3A2349652567631A00960D3B /* couple-3.mp4 in Resources */,
+				3A2349662567631A00960D3B /* couple-4.mp4 in Resources */,
+				3A2349672567631A00960D3B /* couple-5.mp4 in Resources */,
+				3A2349682567631A00960D3B /* couple-6.mp4 in Resources */,
+				3A2349692567631A00960D3B /* couple-7.mp4 in Resources */,
+				3A23495C2567616900960D3B /* couple-1.mp4 in Resources */,
 				3AA17B9C25629ED200FCF498 /* Preview Assets.xcassets in Resources */,
 				3AA17B9925629ED200FCF498 /* Assets.xcassets in Resources */,
 			);
@@ -188,12 +233,15 @@
 			files = (
 				3AA17B9725629ED200FCF498 /* ContentView.swift in Sources */,
 				3A91F48C2562B09F00B96D25 /* HomeView.swift in Sources */,
+				3A23495525675FB100960D3B /* LoopMovieView.swift in Sources */,
 				3A9FC70325655D47007341F5 /* PieChatView.swift in Sources */,
 				3A46C7902562A43100CFEC56 /* SelectSexView.swift in Sources */,
 				3A46C7882562A16400CFEC56 /* DatingModel.swift in Sources */,
 				3AB414A32563EE5900CAF54C /* QuestionView.swift in Sources */,
 				3AA17B9525629ED200FCF498 /* previousday_CheckerApp.swift in Sources */,
 				3AA17BA725629EFF00FCF498 /* CheckBoxView.swift in Sources */,
+				3A6E31882567816B00FB5D84 /* EndView.swift in Sources */,
+				3A2349582567609E00960D3B /* LooperBackgroundView.swift in Sources */,
 				3A46C78C2562A1C700CFEC56 /* RootView.swift in Sources */,
 				3AB4149C2563EC7B00CAF54C /* CheckButtonView.swift in Sources */,
 			);

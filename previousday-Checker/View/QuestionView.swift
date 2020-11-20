@@ -17,9 +17,9 @@ struct QuestionView: View {
     @State private var navActive : Bool = false
     
     var page : Pages
-    var pieChartVm : PieChartViewModel
     
     @State private var textOpacity : Double = 0
+    @State private var chartOpcity : Double = 0
     
     var body: some View {
         
@@ -35,7 +35,6 @@ struct QuestionView: View {
                     }, label: {
                         Image(systemName: "chevron.left")
                             .font(.system(size: 24))
-                            .foregroundColor(.black)
                     })
                     .padding()
                     
@@ -46,9 +45,10 @@ struct QuestionView: View {
                 Spacer()
                 
                 Text(page.question)
+                    .font(.title)
                     .opacity(textOpacity)
                     .onAppear(perform: {
-                        withAnimation(.easeInOut(duration: 2.0)) {
+                        withAnimation(.easeInOut(duration: 3.0)) {
                             textOpacity = 1.0
                         }
                     })
@@ -57,7 +57,14 @@ struct QuestionView: View {
                 
                 Spacer()
                 
-                PieChatView(vm: pieChartVm)
+                PieChatView(vm: page.getChart(sex: model.sex))
+                    .opacity(chartOpcity)
+                    .onAppear(perform: {
+                        withAnimation(.easeInOut(duration: 1.0)) {
+                            chartOpcity = 1.0
+                        }
+                    })
+                  
                     
                 
                 Spacer()
@@ -65,30 +72,46 @@ struct QuestionView: View {
                 
                 
                 if showCheckBox {
-                    NavigationLink(destination: QuestionView(page: model.currentPage, pieChartVm: model.pieChart), isActive: $navActive, label: {
-                        CheckButtonView(checked: $checked, action: {
+                    
+                    HStack {
+                        CheckBoxView(checked: $checked)
+                            .padding(.trailing, 5)
+                        
+                        Text( !model.isLastQuestion ? "理解しました。" : "完了")
+                            .foregroundColor(.white)
+                    }
+                    .padding()
+                    
+                    
+                    /// exclude CheckBox cuz Disable Button
+                    NavigationLink(destination:  QuestionView(page: model.currentPage), isActive: $navActive, label: {
+                        
+                        
+                        CheckButtonView(checked: $checked,includeCheckbox: false, action: {
                             if !model.isLastQuestion {
                                 model.nextPage()
                                 navActive = true
                             } else {
                                 // TODO: - finish
-                                print("Last")
+                                self.model.viewState = .Finish
                             }
                             
                             
-                        },text: !model.isLastQuestion ? "次へ" : "完了")
-                            .transition(AnyTransition.opacity.animation(.easeInOut(duration: 1.0)))
-                            .padding()
+                        })
+                        .transition(AnyTransition.opacity.animation(.easeInOut(duration: 1.0)))
+                        .padding(.bottom, 20)
                     })
+                    .disabled(checked ? false : true)
                     
-              
-                        
                 }
                 
                 Spacer()
-            
+                
             }
-            .background(model.baseColor.ignoresSafeArea(.all, edges: .all))
+            .foregroundColor(.white)
+            .background(LooperBackgroundView(fileName: nil, sex: model.sex))
+//            .background(LooperBackgroundView(fileName: model.currentPage.getViedeo(sex: model.sex), sex: model.sex))
+
             .onTapGesture{
                 withAnimation(.easeInOut(duration: 1.0),
                               {
@@ -107,6 +130,6 @@ struct QuestionView: View {
 
 struct FirstQView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionView(page: .Shoes, pieChartVm: PieChartViewModel(negativePer: 33))
+        QuestionView( page: .Shoes)
     }
 }

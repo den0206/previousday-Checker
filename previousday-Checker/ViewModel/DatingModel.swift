@@ -30,11 +30,24 @@ enum Pages {
             return "You have a strong body odor?"
         }
     }
+    
+    func getChart(sex : Sex) -> PieChartViewModel {
+        
+        switch self {
+        
+        case .Shoes:
+            return sex == .Man ? PieChartViewModel(negativePer: 50) : PieChartViewModel(negativePer: 51)
+        case .Tooth:
+            return sex == .Man ? PieChartViewModel(negativePer: 60) : PieChartViewModel(negativePer: 61)
+        case .Smell:
+            return sex == .Man ? PieChartViewModel(negativePer: 70) : PieChartViewModel(negativePer: 71)
+        }
+       
+    }
 }
 
 
-
-class DatingModel: ObservableObject {
+final class DatingModel: ObservableObject {
     
     @Environment(\.presentationMode) var presentation
     
@@ -47,21 +60,6 @@ class DatingModel: ObservableObject {
         }
     }
     
-    var pieChart : PieChartViewModel {
-        
-        /// switch Sex
-//        switch sex {}
-        
-        switch currentPage {
-      
-        case .Shoes:
-            return PieChartViewModel(negativePer: 50)
-        case .Tooth:
-            return PieChartViewModel(negativePer: 60)
-        case .Smell:
-            return PieChartViewModel(negativePer: 70)
-        }
-    }
     
     var isLastQuestion : Bool {
         
@@ -78,6 +76,17 @@ class DatingModel: ObservableObject {
         }
     }
   
+    
+    //MARK: - functions
+    
+    func finishModel() {
+        self.currentPage = .Shoes
+        self.viewState = .Home
+    }
+    
+    func resetSex() {
+        self.setSex = false
+    }
     
     func nextPage() {
         
@@ -112,3 +121,33 @@ class DatingModel: ObservableObject {
     
     
 }
+
+//
+//var pieChart : PieChartViewModel {
+//
+//    /// switch Sex
+////        switch sex {}
+//
+//    switch currentPage {
+//
+//    case .Shoes:
+//        return PieChartViewModel(negativePer: 50)
+//    case .Tooth:
+//        return PieChartViewModel(negativePer: 60)
+//    case .Smell:
+//        return PieChartViewModel(negativePer: 70)
+//    }
+//}
+//
+//var videoName : String {
+//
+//    switch currentPage {
+//
+//    case .Shoes :
+//        return sex == .Man ? "" : ""
+//    case .Tooth :
+//        return sex == .Man ? "" : ""
+//    case .Smell :
+//        return sex == .Man ? "" : ""
+//    }
+//}

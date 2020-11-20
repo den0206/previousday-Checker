@@ -10,6 +10,7 @@ import SwiftUI
 enum ViewState {
   
     case Home
+    case Finish
     
 }
 
@@ -22,7 +23,14 @@ struct RootView: View {
         if !model.setSex{
             SelectSexView()
         } else {
-            HomeView()
+            
+            switch model.viewState {
+            case .Home :
+                /// inxlude questions
+                HomeView()
+            case .Finish:
+                EndView()
+            }
         }
         
         

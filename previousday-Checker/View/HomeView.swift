@@ -26,12 +26,21 @@ struct HomeView: View {
         
         NavigationView {
             
-            ZStack {
-                
-                backColor.edgesIgnoringSafeArea(.all)
-                
                 VStack(spacing : 20) {
                     
+                    HStack {
+                        
+                        Button(action: {
+                            model.resetSex()
+                        }, label: {
+                            Image(systemName: "chevron.left")
+                                .font(.system(size: 24))
+                        })
+                        .padding()
+                        
+                        Spacer()
+                        
+                    }
                     
                     Spacer()
                     
@@ -49,19 +58,19 @@ struct HomeView: View {
                     Spacer()
                     
                     
-                    NavigationLink(destination: QuestionView(page: model.currentPage, pieChartVm: model.pieChart), isActive: $navActive) {
+                    NavigationLink(destination: QuestionView(page: model.currentPage), isActive: $navActive) {
                         CustomButton(action: {self.navActive = true}, text: "始める")
                     }
-//                    .isDetailLink(false)
-                    .padding()
+                    .padding(.bottom, 20)
+                    
                     
                 }
-                
-            }
+                .background( LooperBackgroundView( sex: model.sex))
+       
+            .foregroundColor(.white)
             
             .navigationBarHidden(true)
-        }
-        
+        }        
     
       
         
