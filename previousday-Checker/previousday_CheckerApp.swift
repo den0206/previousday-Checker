@@ -14,6 +14,8 @@ struct previousday_CheckerApp: App {
     
     var body: some Scene {
         WindowGroup {
+            
+//            EndView().environmentObject(model)
             RootView().environmentObject(model)
         }
     }

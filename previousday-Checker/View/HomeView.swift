@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @EnvironmentObject var model : DatingModel
     @State private var navActive : Bool = false
+    @State private var didAppear = false
     
     var backColor : Color {
         
@@ -44,18 +45,28 @@ struct HomeView: View {
                     
                     Spacer()
                     
-                    Text("Home")
-                        .font(.title2)
-                    
-                    switch model.sex {
-                    
-                    case .Man :
-                        Text("Man")
-                    case .Woman :
-                        Text("Woman")
+                    if didAppear {
+                        
+                        Group {
+                            Text("Home")
+                                .font(.title)
+                            
+                            switch model.sex {
+                            
+                            case .Man :
+                                Text("Man")
+                            case .Woman :
+                                Text("Woman")
+                          
+                            }
+                        }
+                        .transition(AnyTransition.opacity.animation(.easeInOut(duration: 2.0)))
+
                   
+                        Spacer()
                     }
-                    Spacer()
+                    
+                  
                     
                     
                     NavigationLink(destination: QuestionView(page: model.currentPage), isActive: $navActive) {
@@ -66,6 +77,9 @@ struct HomeView: View {
                     
                 }
                 .background( LooperBackgroundView( sex: model.sex))
+                .onAppear(perform: {
+                    didAppear = true
+                })
        
             .foregroundColor(.white)
             

@@ -13,7 +13,7 @@ enum Sex {
     case Woman
 }
 
-enum Pages {
+enum Pages : CaseIterable{
    
     case Shoes
     case Tooth

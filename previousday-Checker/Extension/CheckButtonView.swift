@@ -42,7 +42,7 @@ struct CustomButton : View {
     
     var action : () -> Void
     var text : String = "つぎへ"
-    var trailingColor : Color = Color.green
+    var trailingColor : Color = Color.yellow
     
     
     var body: some View {
