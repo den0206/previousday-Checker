@@ -17,6 +17,7 @@ enum Pages : CaseIterable{
    
     case Shoes
     case Tooth
+    case Nail
     case Smell
     
     var question : String {
@@ -26,6 +27,8 @@ enum Pages : CaseIterable{
             return "your shoes beautiful?"
         case .Tooth:
             return "your tooth beautiful?"
+        case .Nail :
+            return "your nail Beautiful?"
         case .Smell:
             return "You have a strong body odor?"
         }
@@ -39,6 +42,8 @@ enum Pages : CaseIterable{
             return sex == .Man ? PieChartViewModel(negativePer: 50) : PieChartViewModel(negativePer: 51)
         case .Tooth:
             return sex == .Man ? PieChartViewModel(negativePer: 60) : PieChartViewModel(negativePer: 61)
+        case .Nail :
+            return sex == .Man ? PieChartViewModel(negativePer: 35) : PieChartViewModel(negativePer: 88)
         case .Smell:
             return sex == .Man ? PieChartViewModel(negativePer: 70) : PieChartViewModel(negativePer: 71)
         }
@@ -65,17 +70,7 @@ final class DatingModel: ObservableObject {
         
         return currentPage == .Smell
     }
-    
-    
-    var baseColor : Color {
-        switch sex {
-        case .Man :
-            return Color.blue
-        case .Woman :
-            return Color.pink
-        }
-    }
-  
+
     
     //MARK: - functions
     
@@ -95,9 +90,12 @@ final class DatingModel: ObservableObject {
         case .Shoes:
             currentPage = .Tooth
         case .Tooth:
-            currentPage = .Smell
+            currentPage = .Nail
+        case .Nail:
+            currentPage = .Nail
         case .Smell:
             print("Next")
+        
         }
     }
     
@@ -110,8 +108,10 @@ final class DatingModel: ObservableObject {
             print("Already")
         case .Tooth:
             currentPage = .Shoes
-        case .Smell:
+        case .Nail:
             currentPage = .Tooth
+        case .Smell:
+            currentPage = .Nail
         }
         
        

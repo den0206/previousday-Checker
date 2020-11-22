@@ -11,6 +11,7 @@ struct SelectSexView: View {
     
     @EnvironmentObject var model : DatingModel
     @State private var blockOpaity : Double = 0
+    @State private  var title : String = ""
     
     var body: some View {
        
@@ -21,6 +22,13 @@ struct SelectSexView: View {
                 HStack {
                     Spacer()
                 }
+                
+                Text(title)
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .transition(.opacity)
+                    
+                Spacer()
                 
                 HStack(spacing : 10) {
                     
@@ -36,7 +44,17 @@ struct SelectSexView: View {
                 .padding()
                 
                 
-            }.background(LooperBackgroundView())
+            }
+           
+            .background(LooperBackgroundView())
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    withAnimation {
+                        self.title = "For a beautiful Encounter.."
+
+                    }
+                }
+            }
  
     }
 }

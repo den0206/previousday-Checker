@@ -20,6 +20,7 @@ struct QuestionView: View {
     
     @State private var textOpacity : Double = 0
     @State private var chartOpcity : Double = 0
+    @State private var showCamera = false
     
     var body: some View {
         
@@ -44,14 +45,19 @@ struct QuestionView: View {
                 
                 Spacer()
                 
-                Text(page.question)
-                    .font(.title)
-                    .opacity(textOpacity)
-                    .onAppear(perform: {
-                        withAnimation(.easeInOut(duration: 3.0)) {
-                            textOpacity = 1.0
-                        }
-                    })
+                    Text(page.question)
+                        .font(.title)
+                        .opacity(textOpacity)
+                        .onAppear(perform: {
+                            withAnimation(.easeInOut(duration: 3.0)) {
+                                textOpacity = 1.0
+                            }
+                        })
+                      
+                    
+               
+        
+             
                 
                 /// present circle graph
                 
@@ -64,6 +70,19 @@ struct QuestionView: View {
                             chartOpcity = 1.0
                         }
                     })
+                
+                
+                if page == .Tooth {
+                    
+                    Spacer()
+                    
+                    CustomButton(action: {showCamera = true}, text: "Active In Camera", trailingColor: .yellow)
+                        .opacity(textOpacity)
+                        .padding()
+                        .fullScreenCover(isPresented: $showCamera) {
+                            InCameraView()
+                        }
+                }
                   
                     
                 

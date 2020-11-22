@@ -11,18 +11,10 @@ struct HomeView: View {
     
     @EnvironmentObject var model : DatingModel
     @State private var navActive : Bool = false
+    
+    @State private var animation = false
     @State private var didAppear = false
-    
-    var backColor : Color {
-        
-        switch model.sex {
-        case .Man :
-             return Color.blue
-        case .Woman :
-             return Color.pink
-        }
-    }
-    
+
     var body: some View {
         
         NavigationView {
@@ -43,7 +35,19 @@ struct HomeView: View {
                         
                     }
                     
-                    Spacer()
+               
+                    Image("heart")
+                        .resizable()
+                        .renderingMode(.template)
+                        .foregroundColor(.red)
+                        .frame(width: 100, height: 100)
+                        .scaleEffect(animation ? 0.5 : 1)
+                        .animation(Animation.linear(duration: 1).repeatForever())
+                        .onAppear(perform: {
+                            self.animation = true
+                        })
+                    
+                    
                     
                     if didAppear {
                         
@@ -94,6 +98,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView().environmentObject(DatingModel())
     }
 }

@@ -20,7 +20,9 @@
 		3A46C78C2562A1C700CFEC56 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46C78B2562A1C700CFEC56 /* RootView.swift */; };
 		3A46C7902562A43100CFEC56 /* SelectSexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A46C78F2562A43100CFEC56 /* SelectSexView.swift */; };
 		3A6E31882567816B00FB5D84 /* EndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E31872567816B00FB5D84 /* EndView.swift */; };
+		3A749374256A431A00917AB6 /* AVViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A749373256A431A00917AB6 /* AVViewModel.swift */; };
 		3A91F48C2562B09F00B96D25 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A91F48B2562B09F00B96D25 /* HomeView.swift */; };
+		3A9DF81E256A411300F6901E /* InCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9DF81D256A411300F6901E /* InCameraView.swift */; };
 		3A9FC70325655D47007341F5 /* PieChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9FC70225655D47007341F5 /* PieChatView.swift */; };
 		3AA17B9525629ED200FCF498 /* previousday_CheckerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17B9425629ED200FCF498 /* previousday_CheckerApp.swift */; };
 		3AA17B9725629ED200FCF498 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17B9625629ED200FCF498 /* ContentView.swift */; };
@@ -45,7 +47,9 @@
 		3A46C78B2562A1C700CFEC56 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		3A46C78F2562A43100CFEC56 /* SelectSexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSexView.swift; sourceTree = "<group>"; };
 		3A6E31872567816B00FB5D84 /* EndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndView.swift; sourceTree = "<group>"; };
+		3A749373256A431A00917AB6 /* AVViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVViewModel.swift; sourceTree = "<group>"; };
 		3A91F48B2562B09F00B96D25 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3A9DF81D256A411300F6901E /* InCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InCameraView.swift; sourceTree = "<group>"; };
 		3A9FC70225655D47007341F5 /* PieChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChatView.swift; sourceTree = "<group>"; };
 		3AA17B9125629ED200FCF498 /* previousday-Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "previousday-Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA17B9425629ED200FCF498 /* previousday_CheckerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = previousday_CheckerApp.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				3A46C7872562A16400CFEC56 /* DatingModel.swift */,
+				3A749373256A431A00917AB6 /* AVViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 		3AA17BA525629EE600FCF498 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				3A9DF81D256A411300F6901E /* InCameraView.swift */,
 				3A9FC70225655D47007341F5 /* PieChatView.swift */,
 				3AB4149B2563EC7B00CAF54C /* CheckButtonView.swift */,
 				3AA17BA625629EFF00FCF498 /* CheckBoxView.swift */,
@@ -231,6 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9DF81E256A411300F6901E /* InCameraView.swift in Sources */,
+				3A749374256A431A00917AB6 /* AVViewModel.swift in Sources */,
 				3AA17B9725629ED200FCF498 /* ContentView.swift in Sources */,
 				3A91F48C2562B09F00B96D25 /* HomeView.swift in Sources */,
 				3A23495525675FB100960D3B /* LoopMovieView.swift in Sources */,
