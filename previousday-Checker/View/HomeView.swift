@@ -30,25 +30,11 @@ struct HomeView: View {
                                 .font(.system(size: 24))
                         })
                         .padding()
-                        
                         Spacer()
-                        
                     }
                     
-               
-                    Image("heart")
-                        .resizable()
-                        .renderingMode(.template)
-                        .foregroundColor(.red)
-                        .frame(width: 100, height: 100)
-                        .scaleEffect(animation ? 0.5 : 1)
-                        .animation(Animation.linear(duration: 1).repeatForever())
-                        .onAppear(perform: {
-                            self.animation = true
-                        })
-                    
-                    
-                    
+                    Spacer()
+        
                     if didAppear {
                         
                         Group {
@@ -88,11 +74,7 @@ struct HomeView: View {
             .foregroundColor(.white)
             
             .navigationBarHidden(true)
-        }        
-    
-      
-        
-        
+        }
     }
 }
 

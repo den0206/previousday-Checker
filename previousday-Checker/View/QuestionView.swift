@@ -53,12 +53,7 @@ struct QuestionView: View {
                                 textOpacity = 1.0
                             }
                         })
-                      
-                    
-               
-        
-             
-                
+          
                 /// present circle graph
                 
                 Spacer()
@@ -76,8 +71,9 @@ struct QuestionView: View {
                     
                     Spacer()
                     
-                    CustomButton(action: {showCamera = true}, text: "Active In Camera", trailingColor: .yellow)
+                    CustomButton(action: {showCamera = true}, text: "Active In Camera", trailingColor: .yellow, image: Image(systemName: "camera"))
                         .opacity(textOpacity)
+                        .disabled(textOpacity != 1)
                         .padding()
                         .fullScreenCover(isPresented: $showCamera) {
                             InCameraView()

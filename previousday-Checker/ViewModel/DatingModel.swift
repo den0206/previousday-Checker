@@ -49,6 +49,17 @@ enum Pages : CaseIterable{
         }
        
     }
+    
+    static func getAllPages(sex : Sex) -> [Pages] {
+        
+        switch sex {
+        case .Man:
+            return [.Shoes,.Tooth,.Smell]
+        case .Woman :
+            
+            return Pages.allCases
+        }
+    }
 }
 
 
@@ -92,7 +103,7 @@ final class DatingModel: ObservableObject {
         case .Tooth:
             currentPage = .Nail
         case .Nail:
-            currentPage = .Nail
+            currentPage = .Smell
         case .Smell:
             print("Next")
         
@@ -122,32 +133,3 @@ final class DatingModel: ObservableObject {
     
 }
 
-//
-//var pieChart : PieChartViewModel {
-//
-//    /// switch Sex
-////        switch sex {}
-//
-//    switch currentPage {
-//
-//    case .Shoes:
-//        return PieChartViewModel(negativePer: 50)
-//    case .Tooth:
-//        return PieChartViewModel(negativePer: 60)
-//    case .Smell:
-//        return PieChartViewModel(negativePer: 70)
-//    }
-//}
-//
-//var videoName : String {
-//
-//    switch currentPage {
-//
-//    case .Shoes :
-//        return sex == .Man ? "" : ""
-//    case .Tooth :
-//        return sex == .Man ? "" : ""
-//    case .Smell :
-//        return sex == .Man ? "" : ""
-//    }
-//}

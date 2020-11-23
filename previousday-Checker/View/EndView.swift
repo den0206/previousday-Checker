@@ -27,7 +27,7 @@ struct EndView: View {
                 /// forEach Animation
                 ForEach(pages.indices) { i in
                     
-                    let page = Pages.allCases[i]
+                    let page = pages[i]
                     
                     HStack {
                         CheckBoxView(checked: .constant(true))
@@ -42,8 +42,8 @@ struct EndView: View {
             }
                
             Spacer()
-            CustomButton(action: {model.finishModel()}, text: "終了")
-                .padding(.bottom, 10)
+            CustomButton(action: {model.finishModel()}, text: "終了",trailingColor: .green)
+                .padding(.bottom, 20)
     
 
         }
@@ -52,7 +52,7 @@ struct EndView: View {
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 withAnimation {
-                    self.pages = Pages.allCases
+                    self.pages = Pages.getAllPages(sex: model.sex)
                 }
             }
         }

@@ -14,10 +14,10 @@ struct InCameraView: View {
     
     var body: some View {
         
-        ZStack(alignment: .top) {
+        ZStack {
             
             /// Z1
-            HStack{
+            HStack(alignment: .top){
                 
                 Button(action: {
                     presentation.wrappedValue.dismiss()

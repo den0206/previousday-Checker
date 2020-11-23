@@ -43,16 +43,30 @@ struct CustomButton : View {
     var action : () -> Void
     var text : String = "つぎへ"
     var trailingColor : Color = Color.yellow
+    var image : Image? = nil
     
     
     var body: some View {
         Button(action: {action()}, label: {
-            Text(text)
-                .frame(width: 150, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .background(configureGradient(trailingColor: trailingColor))
-                .foregroundColor(.white)
-                .clipShape(Capsule())
+            
+            if image != nil {
+                VStack(spacing :5) {
+                    image!
+                    Text(text)
+                
+                }.padding()
+         
+            } else {
+                 Text(text)
+                    .frame(width: 150, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            }
+            
+            
+            
         })
+        .background(configureGradient(trailingColor: trailingColor))
+        .foregroundColor(.white)
+        .clipShape(Capsule())
     }
 }
 
@@ -63,6 +77,8 @@ func configureGradient(leadingColor : Color = .clear, trailingColor : Color) -> 
 
 struct BaseView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckButtonView(checked: .constant(false),action: {})
+        
+        CustomButton(action: {}, image: Image(systemName: "camera"))
+//        CheckButtonView(checked: .constant(false),action: {})
     }
 }

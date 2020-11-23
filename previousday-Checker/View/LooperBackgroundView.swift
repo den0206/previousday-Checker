@@ -30,9 +30,9 @@ struct layView : View{
         
         switch sex {
         case .Man :
-            Color.blue.opacity(0.2)
+            Color.blue.opacity(0.1)
         case .Woman :
-            Color.pink.opacity(0.2)
+            Color.pink.opacity(0.1)
         default:
             Color.white.opacity(0.5)
 
