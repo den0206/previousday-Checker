@@ -17,6 +17,7 @@ struct EndView: View {
             
             HStack {
                 Spacer()
+            
             }
             
             Spacer()
@@ -45,6 +46,9 @@ struct EndView: View {
             CustomButton(action: {model.finishModel()}, text: "終了",trailingColor: .green)
                 .padding(.bottom, 20)
     
+            AdBannerView()
+                .frame(width: 320, height: 50)
+                .padding(.bottom,10)
 
         }
         .foregroundColor(.white)

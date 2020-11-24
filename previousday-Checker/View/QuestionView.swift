@@ -39,7 +39,10 @@ struct QuestionView: View {
                     })
                     .padding()
                     
+                 
+                    
                     Spacer()
+                    
                 }
                     
                 
@@ -120,7 +123,10 @@ struct QuestionView: View {
                     
                 }
                 
-                Spacer()
+                AdBannerView()
+                    .frame(width: 320, height: 50)
+                    .padding(.bottom,10)
+                
                 
             }
             .foregroundColor(.white)

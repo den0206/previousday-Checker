@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 @main
 struct previousday_CheckerApp: App {
    
     @StateObject var model = DatingModel()
+    
+    init() {
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+    }
     
     var body: some Scene {
         WindowGroup {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,9 @@
 		3AA17BA725629EFF00FCF498 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA17BA625629EFF00FCF498 /* CheckBoxView.swift */; };
 		3AB4149C2563EC7B00CAF54C /* CheckButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4149B2563EC7B00CAF54C /* CheckButtonView.swift */; };
 		3AB414A32563EE5900CAF54C /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB414A22563EE5900CAF54C /* QuestionView.swift */; };
+		3AD57FF3256B8371003F9B58 /* secKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD57FF2256B8371003F9B58 /* secKey.swift */; };
+		3AD57FF6256B84AF003F9B58 /* AdMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD57FF5256B84AF003F9B58 /* AdMob.swift */; };
+		E819FEF257CE93D67ED39FFA /* Pods_previousday_Checker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E35CC255EBA79ED2DD2A659 /* Pods_previousday_Checker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,11 @@
 		3AA17BA625629EFF00FCF498 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 		3AB4149B2563EC7B00CAF54C /* CheckButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButtonView.swift; sourceTree = "<group>"; };
 		3AB414A22563EE5900CAF54C /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		3AD57FF2256B8371003F9B58 /* secKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secKey.swift; sourceTree = "<group>"; };
+		3AD57FF5256B84AF003F9B58 /* AdMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMob.swift; sourceTree = "<group>"; };
+		5E35CC255EBA79ED2DD2A659 /* Pods_previousday_Checker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_previousday_Checker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFF0ADE2A76524FEE15E9A21 /* Pods-previousday-Checker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-previousday-Checker.debug.xcconfig"; path = "Target Support Files/Pods-previousday-Checker/Pods-previousday-Checker.debug.xcconfig"; sourceTree = "<group>"; };
+		E8C8FCAF982EFB12A55119D3 /* Pods-previousday-Checker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-previousday-Checker.release.xcconfig"; path = "Target Support Files/Pods-previousday-Checker/Pods-previousday-Checker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +75,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E819FEF257CE93D67ED39FFA /* Pods_previousday_Checker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1908A98A53293BBCA7A8CDFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFF0ADE2A76524FEE15E9A21 /* Pods-previousday-Checker.debug.xcconfig */,
+				E8C8FCAF982EFB12A55119D3 /* Pods-previousday-Checker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3A23495A2567611A00960D3B /* Movie */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +119,8 @@
 			children = (
 				3AA17B9325629ED200FCF498 /* previousday-Checker */,
 				3AA17B9225629ED200FCF498 /* Products */,
+				1908A98A53293BBCA7A8CDFF /* Pods */,
+				58FC692A70DD476DDE84B468 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,11 +174,21 @@
 			children = (
 				3A9DF81D256A411300F6901E /* InCameraView.swift */,
 				3A9FC70225655D47007341F5 /* PieChatView.swift */,
+				3AD57FF2256B8371003F9B58 /* secKey.swift */,
 				3AB4149B2563EC7B00CAF54C /* CheckButtonView.swift */,
 				3AA17BA625629EFF00FCF498 /* CheckBoxView.swift */,
 				3A23495425675FB100960D3B /* LoopMovieView.swift */,
+				3AD57FF5256B84AF003F9B58 /* AdMob.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		58FC692A70DD476DDE84B468 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E35CC255EBA79ED2DD2A659 /* Pods_previousday_Checker.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AA17BA025629ED200FCF498 /* Build configuration list for PBXNativeTarget "previousday-Checker" */;
 			buildPhases = (
+				8EECBF0581C75F2B5595AFE8 /* [CP] Check Pods Manifest.lock */,
 				3AA17B8D25629ED100FCF498 /* Sources */,
 				3AA17B8E25629ED100FCF498 /* Frameworks */,
 				3AA17B8F25629ED100FCF498 /* Resources */,
+				96DABEF349FF0A2BACF4C591 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +264,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8EECBF0581C75F2B5595AFE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-previousday-Checker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96DABEF349FF0A2BACF4C591 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-previousday-Checker/Pods-previousday-Checker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-previousday-Checker/Pods-previousday-Checker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-previousday-Checker/Pods-previousday-Checker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3AA17B8D25629ED100FCF498 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -247,7 +321,9 @@
 				3A46C7882562A16400CFEC56 /* DatingModel.swift in Sources */,
 				3AB414A32563EE5900CAF54C /* QuestionView.swift in Sources */,
 				3AA17B9525629ED200FCF498 /* previousday_CheckerApp.swift in Sources */,
+				3AD57FF6256B84AF003F9B58 /* AdMob.swift in Sources */,
 				3AA17BA725629EFF00FCF498 /* CheckBoxView.swift in Sources */,
+				3AD57FF3256B8371003F9B58 /* secKey.swift in Sources */,
 				3A6E31882567816B00FB5D84 /* EndView.swift in Sources */,
 				3A2349582567609E00960D3B /* LooperBackgroundView.swift in Sources */,
 				3A46C78C2562A1C700CFEC56 /* RootView.swift in Sources */,
@@ -376,6 +452,7 @@
 		};
 		3AA17BA125629ED200FCF498 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFF0ADE2A76524FEE15E9A21 /* Pods-previousday-Checker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,6 +475,7 @@
 		};
 		3AA17BA225629ED200FCF498 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8C8FCAF982EFB12A55119D3 /* Pods-previousday-Checker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

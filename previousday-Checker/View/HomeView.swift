@@ -62,7 +62,11 @@ struct HomeView: View {
                     NavigationLink(destination: QuestionView(page: model.currentPage), isActive: $navActive) {
                         CustomButton(action: {self.navActive = true}, text: "始める")
                     }
-                    .padding(.bottom, 20)
+                    
+                    
+                    AdBannerView()
+                        .frame(width: 320, height: 50)
+                        .padding(.bottom , 10)
                     
                     
                 }

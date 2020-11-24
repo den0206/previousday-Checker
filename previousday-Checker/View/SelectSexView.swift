@@ -16,12 +16,13 @@ struct SelectSexView: View {
     var body: some View {
        
             VStack {
-                
-                Spacer()
-                
+                                
                 HStack {
                     Spacer()
+                
                 }
+                
+                Spacer()
                 
                 Text(title)
                     .font(.title2)
@@ -43,6 +44,9 @@ struct SelectSexView: View {
                 })
                 .padding()
                 
+                AdBannerView()
+                    .frame(width: 320, height: 50)
+                    .padding(.bottom,10)
                 
             }
            
